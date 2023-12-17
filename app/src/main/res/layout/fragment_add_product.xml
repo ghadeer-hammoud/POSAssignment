@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/DialogTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_new_product"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dim12"
+        android:src="@drawable/ic_close_24"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTitle"
+        app:layout_constraintEnd_toEndOf="@+id/tvTitle"
+        app:layout_constraintTop_toTopOf="@+id/tvTitle"
+        app:tint="@color/white" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/titleSection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="tvTitle, ivClose"
+        />
+
+    <ScrollView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/smallSpace"
+        app:layout_constraintBottom_toTopOf="@+id/btnAddProduct"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:padding="@dimen/dim12"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvBarcodeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/barcode"
+                android:textAllCaps="true"
+                android:textColor="@color/grey_800"
+                android:textSize="@dimen/smallFont"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/etBarcode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/barcode"
+                android:inputType="text"
+                android:paddingTop="@dimen/largeSpace"
+                android:paddingBottom="@dimen/largeSpace"
+                android:selectAllOnFocus="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/smallFont"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvBarcodeLabel" />
+
+
+            <TextView
+                android:id="@+id/tvProductNameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/largeSpace"
+                android:text="@string/name"
+                android:textAllCaps="true"
+                android:textColor="@color/grey_800"
+                android:textSize="@dimen/smallFont"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etBarcode" />
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/name"
+                android:inputType="textCapWords"
+                android:paddingTop="@dimen/largeSpace"
+                android:paddingBottom="@dimen/largeSpace"
+                android:selectAllOnFocus="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/smallFont"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvProductNameLabel" />
+
+            <TextView
+                android:id="@+id/tvPriceLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/largeSpace"
+                android:text="@string/price"
+                android:textAllCaps="true"
+                android:textColor="@color/grey_800"
+                android:textSize="@dimen/smallFont"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etName" />
+
+            <EditText
+                android:id="@+id/etPrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/amount_hint"
+                android:inputType="numberDecimal"
+                android:paddingTop="@dimen/largeSpace"
+                android:paddingBottom="@dimen/largeSpace"
+                android:selectAllOnFocus="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/largeFont"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPriceLabel" />
+
+            <TextView
+                android:id="@+id/tvCategoryLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/largeSpace"
+                android:text="@string/category"
+                android:textAllCaps="true"
+                android:textColor="@color/grey_800"
+                android:textSize="@dimen/smallFont"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etPrice" />
+
+            <Spinner
+                android:id="@+id/spCategory"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="@dimen/smallSpace"
+                android:background="@drawable/textview_background_grey_radius_6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCategoryLabel"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent=".8" />
+
+            <ImageButton
+                android:id="@+id/btnAddCategory"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/smallSpace"
+                android:background="@null"
+                android:contentDescription="Add Category"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_add_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCategoryLabel"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent=".2"
+                app:tint="@color/black" />
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnAddProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/largeSpace"
+        android:text="@string/add_new_product"
+        android:textAllCaps="true"
+        app:cornerRadius="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingStart="@dimen/dim6"
+    android:paddingEnd="@dimen/dim6"
+    android:paddingTop="@dimen/dim8"
+    android:paddingBottom="@dimen/dim8">
+
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dim6"
+        android:text="Product name"
+        android:textSize="@dimen/smallFont"
+        android:padding="@dimen/dim2"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textAlignment="viewStart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".35"
+        />
+    
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="35.00"
+        android:textSize="@dimen/smallFont"
+        android:padding="@dimen/dim2"
+        android:gravity="center_horizontal"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintStart_toEndOf="@+id/tvName"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".1"
+        />
+
+    <TextView
+        android:id="@+id/tvTax"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="2.00"
+        android:textSize="@dimen/smallFont"
+        android:padding="@dimen/dim2"
+        android:gravity="center_horizontal"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintStart_toEndOf="@+id/tvPrice"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".1"
+        />
+
+    <TextView
+        android:id="@+id/tvDiscount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="0.00"
+        android:textSize="@dimen/smallFont"
+        android:padding="@dimen/dim2"
+        android:gravity="center_horizontal"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintStart_toEndOf="@+id/tvTax"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".1"
+        />
+
+    <TextView
+        android:id="@+id/tvQty"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="2"
+        android:textSize="@dimen/smallFont"
+        android:padding="@dimen/dim2"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        app:layout_constraintStart_toEndOf="@+id/tvDiscount"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".1"
+        />
+
+    <TextView
+        android:id="@+id/tvTotal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="10.00"
+        android:textSize="@dimen/smallFont"
+        android:textStyle="bold"
+        android:padding="@dimen/dim2"
+        android:gravity="center_horizontal"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintStart_toEndOf="@+id/tvQty"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".2"
+        />
+
+
+    <ImageView
+        android:id="@+id/ivRemove"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_delete_24"
+        app:tint="@color/blue_grey_dark"
+        app:layout_constraintStart_toEndOf="@+id/tvTotal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".05"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dim2">2dp</dimen>
+    <dimen name="dim6">6dp</dimen>
+    <dimen name="dim8">8dp</dimen>
+    <dimen name="dim10">10dp</dimen>
+    <dimen name="dim12">12dp</dimen>
+    <dimen name="dim16">16dp</dimen>
+    <dimen name="dim20">20dp</dimen>
+    <dimen name="dim24">24dp</dimen>
+    <dimen name="dim30">30dp</dimen>
+    <dimen name="dim36">36dp</dimen>
+    <dimen name="dim48">48dp</dimen>
+    <dimen name="dim60">60dp</dimen>
+    <dimen name="dim80">80dp</dimen>
+    <dimen name="dim100">100dp</dimen>
+    <dimen name="dim200">200dp</dimen>
+
+    <dimen name="lsSmallSpace">2dp</dimen>
+    <dimen name="smallSpace">8dp</dimen>
+    <dimen name="mediumSpace">12dp</dimen>
+    <dimen name="largeSpace">16dp</dimen>
+    <dimen name="xLargeSpace">20dp</dimen>
+    <dimen name="xxLargeSpace">24dp</dimen>
+
+
+    <dimen name="smallFont">12sp</dimen>
+    <dimen name="mediumFont">14sp</dimen>
+    <dimen name="largeFont">16sp</dimen>
+    <dimen name="xLargeFont">18sp</dimen>
+    <dimen name="xxLargeFont">22sp</dimen>
+    <dimen name="xxxLargeFont">28sp</dimen>
+</resources>

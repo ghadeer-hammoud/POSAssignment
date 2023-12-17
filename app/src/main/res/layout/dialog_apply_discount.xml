@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/DialogTitle"
+        android:text="@string/apply_discount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dim12"
+        android:src="@drawable/ic_close_24"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTitle"
+        app:layout_constraintEnd_toEndOf="@+id/tvTitle"
+        app:layout_constraintTop_toTopOf="@+id/tvTitle"
+        app:tint="@color/white" />
+
+    <ScrollView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        app:layout_constraintBottom_toTopOf="@+id/btnApply">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dim30"
+            >
+
+            <RelativeLayout
+                android:id="@+id/layoutTotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textview_background_grey_radius_6"
+                android:backgroundTint="@color/grey_200"
+                android:paddingLeft="@dimen/dim12"
+                android:paddingRight="@dimen/dim12"
+                android:paddingTop="@dimen/dim8"
+                android:paddingBottom="@dimen/dim8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <TextView
+                    android:id="@+id/tvTotalLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/total"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/smallFont"
+                    />
+
+                <TextView
+                    android:id="@+id/tvTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvTotalLabel"
+                    android:layout_centerHorizontal="true"
+                    android:text="AED 0.00"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/mediumFont"
+                    />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvDiscountLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/largeSpace"
+                android:text="@string/discount"
+                android:textColor="@color/black"
+                android:textSize="@dimen/mediumFont"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutTotal"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutDiscount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDiscountLabel"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/largeSpace"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent=".45"
+                    >
+
+                    <TextView
+                        android:id="@+id/tvDiscountPercentageLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/smallSpace"
+                        android:text="@string/percentage"
+                        android:textColor="@color/grey_600"
+                        android:textSize="@dimen/smallFont"
+                        android:textAllCaps="true"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+
+                    <EditText
+                        android:id="@+id/etDiscountPercentage"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/smallSpace"
+                        android:paddingTop="@dimen/largeSpace"
+                        android:paddingBottom="@dimen/largeSpace"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/largeFont"
+                        android:hint="0"
+                        android:inputType="numberDecimal"
+                        android:selectAllOnFocus="true"
+                        app:layout_constraintTop_toBottomOf="@+id/tvDiscountPercentageLabel"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/largeSpace"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent=".45"
+                    >
+
+                    <TextView
+                        android:id="@+id/tvDiscountAmountLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/smallSpace"
+                        android:text="@string/amount"
+                        android:textColor="@color/grey_600"
+                        android:textSize="@dimen/smallFont"
+                        android:textAllCaps="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+
+                    <EditText
+                        android:id="@+id/etDiscountAmount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/smallSpace"
+                        android:paddingTop="@dimen/largeSpace"
+                        android:paddingBottom="@dimen/largeSpace"
+                        android:gravity="end"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/largeFont"
+                        android:hint="0.00"
+                        android:inputType="numberDecimal"
+                        android:selectAllOnFocus="true"
+                        app:layout_constraintTop_toBottomOf="@+id/tvDiscountAmountLabel"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <RelativeLayout
+                android:id="@+id/layoutNewTotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/largeSpace"
+                android:background="@drawable/textview_background_grey_radius_6"
+                android:backgroundTint="@color/green_100"
+                android:paddingLeft="@dimen/dim12"
+                android:paddingRight="@dimen/dim12"
+                android:paddingTop="@dimen/dim8"
+                android:paddingBottom="@dimen/dim8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutDiscount">
+
+
+                <TextView
+                    android:id="@+id/tvNewTotalLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/new_total"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/smallFont"
+                    />
+
+                <TextView
+                    android:id="@+id/tvNewTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvNewTotalLabel"
+                    android:layout_centerHorizontal="true"
+                    android:text="AED 0.00"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/mediumFont"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+    <Button
+        android:id="@+id/btnApply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dim30"
+        android:textAllCaps="true"
+        android:text="@string/apply_discount"
+        app:cornerRadius="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/mediumSpace"
+        android:backgroundTint="@android:color/transparent"
+        android:textAllCaps="true"
+        android:text="@string/cancel"
+        android:textColor="@color/grey_600"
+        app:cornerRadius="4dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnApply"
+        app:layout_constraintTop_toTopOf="@+id/btnApply"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

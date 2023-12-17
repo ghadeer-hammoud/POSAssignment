@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingStart="@dimen/dim6"
+    android:paddingEnd="@dimen/dim6"
+    android:paddingTop="@dimen/dim8"
+    android:paddingBottom="@dimen/dim8">
+
+
+    <TextView
+        android:id="@+id/tvOrderId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dim6"
+        android:text="ORDER122424"
+        android:textSize="@dimen/smallFont"
+        android:padding="@dimen/dim2"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".2"
+        />
+
+    <RelativeLayout
+        android:id="@+id/tvOrderStatusLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/tvOrderId"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".15">
+
+        <TextView
+            android:id="@+id/tvOrderStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Completed"
+            android:textSize="@dimen/smallFont"
+            android:textColor="@color/white"
+            android:paddingTop="@dimen/dim2"
+            android:paddingBottom="@dimen/dim2"
+            android:paddingStart="@dimen/dim6"
+            android:paddingEnd="@dimen/dim6"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:background="@color/green_700"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/tvPaymentStatusLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/tvOrderStatusLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".1">
+
+        <TextView
+            android:id="@+id/tvPaymentStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Paid"
+            android:textSize="@dimen/smallFont"
+            android:textColor="@color/white"
+            android:paddingTop="@dimen/dim2"
+            android:paddingBottom="@dimen/dim2"
+            android:paddingStart="@dimen/dim6"
+            android:paddingEnd="@dimen/dim6"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:background="@color/green_700"
+            />
+
+    </RelativeLayout>
+    
+
+
+    <TextView
+        android:id="@+id/tvAmount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="2.00"
+        android:textSize="@dimen/smallFont"
+        android:padding="@dimen/dim2"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintStart_toEndOf="@+id/tvPaymentStatusLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".1"
+        />
+
+    <TextView
+        android:id="@+id/tvItemsCount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="4"
+        android:textSize="@dimen/smallFont"
+        android:padding="@dimen/dim2"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintStart_toEndOf="@+id/tvAmount"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".07"
+        />
+
+    <TextView
+        android:id="@+id/tvQty"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="6"
+        android:textSize="@dimen/smallFont"
+        android:padding="@dimen/dim2"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintStart_toEndOf="@+id/tvItemsCount"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".08"
+        />
+
+    <TextView
+        android:id="@+id/tvCustomer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Customer name"
+        android:textSize="@dimen/smallFont"
+        android:padding="@dimen/dim2"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintStart_toEndOf="@+id/tvQty"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".12"
+        />
+
+    <TextView
+        android:id="@+id/tvCreateDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="16 Dec 2023 06:00:00"
+        android:textSize="@dimen/smallFont"
+        android:padding="@dimen/dim2"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintStart_toEndOf="@+id/tvCustomer"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".18"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
